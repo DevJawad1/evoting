@@ -1,8 +1,8 @@
 "use client"
+import axios from 'axios';
 import React, {useState} from 'react'
 
-const signup = () => {  
-  // const [first, setfirst] = useState(second)
+const signup = () => {
   const [user, setUser]=useState({
     firstname:"",
     lastname:"",
@@ -10,16 +10,29 @@ const signup = () => {
     password:"",
   })
   
+  let url= "api/user/register"
+
   const handleChange = (e) => {
+    e.preventDefault()
+    // console.log(e.target);
     const { name, value } = e.target;
     setUser((prevUser) => ({
       ...prevUser,
       [name]: value,
     }));
   };
+
+  const submit=()=>{
+    console.log(user);
+    axios.post(url, {firstname:user.firstname, lastname:user.lastname, email:user.email, password:user.password}).then((result)=>{
+      console.log(result);
+    }).catch((Err)=>{
+      console.log(Err);
+    })
+  }
   return (
     <div>
-      <form action="">
+      <div action="">
         <label htmlFor="firstname">Firstname</label>
         <input
           type="text"
@@ -53,7 +66,11 @@ const signup = () => {
           value={user.password}
           onChange={handleChange}
         />
-      </form>
+
+        <button onClick={submit}>
+          Submit
+        </button>
+      </div>
     </div>
   )
 }
