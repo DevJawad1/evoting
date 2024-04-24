@@ -12,12 +12,13 @@ export async function POST(NextRequest){
         if(user){
             console.log('user already exist');
             return  NextResponse.json({error:"User already exist"}, {status:400})
-        }else{
+        }
+        else{
             const newUser = new usermodal(reqBody)
             const saveuser = await newUser.save()
             if (saveuser){
                 console.log('successfully signed up');
-                return  NextResponse.json({message:"User successfully signed up"}, {status:true})
+                return  NextResponse.json({message:"User successfully signed up", success:true})
             }else{
                 console.log('cant save user');
             }
