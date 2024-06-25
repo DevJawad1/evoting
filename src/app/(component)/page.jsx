@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
     return (
         <div>
-            <nav class="navbar navbar-expand-lg bg-body-trasparent d-none d-md-block">
+            <nav class="navbar navbar-expand-lg bg-body-trasparent d-none d-lg-block">
                 <div class="container-fluid">
                     <a class="navbar-brand d-none" href="#">Navbar</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-            <a class="text-white fs-1 d-md-none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <a class="text-white fs-1 d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                 <i class="bi bi-list"></i>
             </a>
             <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{ backgroundColor: "#001124", }}>

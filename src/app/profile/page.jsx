@@ -28,7 +28,7 @@ const Profile = () => {
               </div>
               </div>
             </div>
-            <div className="card bg-transparent col-12 col-md-6 mt-4 mt-md-0 border-0" >
+            <div className="card bg-transparent col-12 col-md-6 mt-4 mt-md-0 border-0 d-flex d-lg-block justify-content-center mx-auto" >
               <div className="d-flex">
                 <div className='w-100 p-3 p-md-0' style={{ backgroundColor: "#001124"}}>
                   <div>
